@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deepwater — token launch radar</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header id="mast">
+  <div class="brand">
+    <div class="mark">◈</div>
+    <div>
+      <h1>Deepwater</h1>
+      <p class="tagline">Pre-token protocols, ranked by what their launch would be worth</p>
+    </div>
+  </div>
+  <div id="stats"></div>
+  <button id="methodBtn" type="button">Methodology</button>
+</header>
+<section id="method" hidden>
+  <h2>How the implied value is built</h2>
+  <p id="methodModel"></p>
+  <ul id="methodNotes"></ul>
+  <p class="fine">The implied value is the model's own claim about a hypothetical token launch, derived only from this snapshot's figures. It never predicts whether or when a token ships, and a protocol "records no token" is DefiLlama's record, never proof one does not exist.</p>
+</section>
+<section id="toolbar">
+  <input id="q" type="search" placeholder="Search protocol, category or chain…" autocomplete="off">
+  <select id="cat"><option value="">All categories</option></select>
+  <select id="chain"><option value="">All chains</option></select>
+  <label class="chk"><input type="checkbox" id="watchOnly" checked> Watchlist floor only</label>
+  <span id="count"></span>
+</section>
+<main id="views">
+  <div id="board" class="view"></div>
+  <aside id="detail" hidden></aside>
+</main>
+<footer>
+  <p>Built for <a data-makefun>make.fun's token launch radar bounty</a> · data: sealed DefiLlama snapshot, <span id="asOf"></span> · floor $50M watchlist</p>
+</footer>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
